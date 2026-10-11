@@ -1,0 +1,32 @@
+{
+  "identifier" : "5B3D9F21",
+  "nonRenewingSubscriptions" : [ ],
+  "products" : [
+    {
+      "displayPrice" : "480",
+      "familyShareable" : false,
+      "internalID" : "6736000002",
+      "localizations" : [
+        {
+          "description" : "ウォッチ無制限と通知タイミングの設定を解放します（買い切り）",
+          "displayName" : "プロ版",
+          "locale" : "ja"
+        }
+      ],
+      "productID" : "com.sidebiz.hojowatch.pro",
+      "referenceName" : "Pro",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "ja",
+    "_storefront" : "JPN",
+    "_storeKitErrors" : [ ]
+  },
+  "subscriptionGroups" : [ ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}
