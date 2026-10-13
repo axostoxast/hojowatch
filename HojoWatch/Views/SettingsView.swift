@@ -9,13 +9,8 @@ struct SettingsView: View {
         NavigationStack {
             Form {
                 Section {
-                    if store.isPro {
-                        ForEach(DeadlineNotifier.candidateOffsets, id: \.self) { offset in
-                            Toggle(offsetLabel(offset), isOn: binding(for: offset))
-                        }
-                    } else {
-                        LabeledContent("通知のタイミング", value: "7日前・3日前・前日")
-                        Button("タイミングを変更する（プロ版）", systemImage: "lock") { isShowingPaywall = true }
+                    ForEach(DeadlineNotifier.candidateOffsets, id: \.self) { offset in
+                        Toggle(offsetLabel(offset), isOn: binding(for: offset))
                     }
                 } header: {
                     Text("締切前の通知（朝9時）")

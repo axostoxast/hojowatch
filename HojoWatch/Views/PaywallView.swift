@@ -14,8 +14,10 @@ struct PaywallView: View {
                     .font(.largeTitle.bold())
                 VStack(alignment: .leading, spacing: 12) {
                     Label("ウォッチする補助金を無制限に（無料版は3件まで）", systemImage: "bell")
-                    Label("通知のタイミングを自由に設定（30日前〜当日）", systemImage: "clock")
                     Label("一度の購入でずっと使える", systemImage: "checkmark.seal")
+                    Text("通知・チェックリスト・カレンダー追加・ウィジェットは無料で使えます。")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
                 }
                 Spacer()
                 if let product = store.product {

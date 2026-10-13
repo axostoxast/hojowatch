@@ -90,8 +90,30 @@ struct PolicyTests {
         #expect(WatchPolicy.canAdd(currentCount: 50, isPro: true))
     }
 
-    @Test func freeUsersGetDefaultOffsetsRegardlessOfSetting() {
-        #expect(NotifySettings.effective(raw: "30,0", isPro: false) == [7, 3, 1])
-        #expect(NotifySettings.effective(raw: "30,0,99", isPro: true) == [30, 0])
+    @Test func everyoneCanChooseNotificationOffsets() {
+        #expect(NotifySettings.parse("30,0,99") == [30, 0])
+        #expect(NotifySettings.parse(NotifySettings.defaultRaw) == [7, 3, 1])
+    }
+}
+
+struct ResubmissionFeatureTests {
+    @Test func widgetSnapshotDropsPastAndSortsByDeadline() {
+        let now = jst("2026-10-13T10:00:00+09:00")
+        let items: [WidgetSnapshot.Item] = [
+            .init(id: "late", title: "B", endAt: jst("2026-11-01T17:00:00+09:00")),
+            .init(id: "past", title: "X", endAt: jst("2026-10-12T17:00:00+09:00")),
+            .init(id: "today", title: "A", endAt: jst("2026-10-13T08:00:00+09:00")),
+        ]
+        let s = WidgetSnapshot.make(items, now: now, calendar: Deadline.calendar)
+        #expect(s.items.map(\.id) == ["today", "late"])
+        let data = try! JSONEncoder().encode(s)
+        #expect(try! JSONDecoder().decode(WidgetSnapshot.self, from: data) == s)
+    }
+
+    @Test func defaultChecklistIsFreshPerSubsidy() {
+        let a = ChecklistItem.defaults, b = ChecklistItem.defaults
+        #expect(a.count == 7)
+        #expect(a.allSatisfy { !$0.done })
+        #expect(a.map(\.title) == b.map(\.title))
     }
 }

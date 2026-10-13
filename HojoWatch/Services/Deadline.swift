@@ -47,7 +47,7 @@ enum Deadline {
 /// 締切前のローカル通知。ウォッチ一覧が変わるたびに全件を組み直す
 enum DeadlineNotifier {
     static let candidateOffsets = [30, 14, 7, 3, 1, 0]
-    static let freeOffsets = [7, 3, 1]
+    static let defaultOffsets = [7, 3, 1]
     static let notifyHour = 9
     /// iOSが保持できる予約は64件まで。余裕を持たせる
     static let maxPending = 60
