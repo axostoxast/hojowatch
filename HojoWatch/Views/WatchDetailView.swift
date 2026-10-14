@@ -10,6 +10,7 @@ struct WatchDetailView: View {
     @FocusState private var memoFocused: Bool
 
     var body: some View {
+        ScrollViewReader { proxy in
         Form {
             Section {
                 Text(item.title).font(.headline)
@@ -37,9 +38,17 @@ struct WatchDetailView: View {
                         HStack(alignment: .firstTextBaseline) {
                             Image(systemName: c.done ? "checkmark.circle.fill" : "circle")
                                 .foregroundStyle(c.done ? Color.accentColor : .secondary)
-                            Text(c.title)
-                                .strikethrough(c.done)
-                                .foregroundStyle(c.done ? .secondary : .primary)
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(c.title)
+                                    .strikethrough(c.done)
+                                    .foregroundStyle(c.done ? .secondary : .primary)
+                                if let due = c.dueDate(endAt: item.endAt), !c.done {
+                                    let overdue = Deadline.daysLeft(until: due) < 0
+                                    Text("\(Deadline.dateLabel(due))までに" + (overdue ? "（期限切れ）" : ""))
+                                        .font(.caption)
+                                        .foregroundStyle(overdue ? .red : .secondary)
+                                }
+                            }
                         }
                     }
                     .buttonStyle(.plain)
@@ -56,14 +65,24 @@ struct WatchDetailView: View {
                 let p = item.checklistProgress
                 Text("申請準備（\(p.done)/\(p.total)）")
             } footer: {
-                Text("必要な準備は補助金ごとに違います。公募要領を見ながら、項目を追加・削除してください。")
+                Text("締切から逆算した目安の期限です。期限の日の朝9時に通知します。必要な準備は補助金ごとに違うので、公募要領を見ながら項目を追加・削除してください。")
             }
+
+            DocumentsSection(subsidyID: item.subsidyID)
+                .id("documents")
 
             Section("メモ") {
                 TextEditor(text: $item.memo)
                     .frame(minHeight: 100)
                     .focused($memoFocused)
             }
+        }
+        .task {
+            if Self.scrollToBottom {
+                try? await Task.sleep(for: .seconds(0.8))
+                proxy.scrollTo("documents", anchor: .top)
+            }
+        }
         }
         .navigationTitle("補助金の詳細")
         .navigationBarTitleDisplayMode(.inline)
@@ -76,10 +95,19 @@ struct WatchDetailView: View {
         }
     }
 
+    /// スクリーンショット用: -scrollBottom で書類の欄を表示する
+    private static var scrollToBottom: Bool {
+        #if DEBUG
+        ProcessInfo.processInfo.arguments.contains("-scrollBottom")
+        #else
+        false
+        #endif
+    }
+
     private func addItem() {
         let title = newItem.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !title.isEmpty else { return }
-        item.checklist.append(ChecklistItem(title: title))
+        item.checklist.append(ChecklistItem(title: title, daysBefore: 7))
         newItem = ""
     }
 }

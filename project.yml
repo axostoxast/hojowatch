@@ -15,7 +15,10 @@ targets:
   HojoWatch:
     type: application
     platform: iOS
-    sources: [HojoWatch, Shared]
+    sources:
+      - path: HojoWatch
+        excludes: [Info.plist]
+      - Shared
     dependencies:
       - target: HojoWatchWidget
     settings:
@@ -23,6 +26,8 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.sidebiz.hojowatch
         CODE_SIGN_ENTITLEMENTS: HojoWatch/HojoWatch.entitlements
         GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_FILE: HojoWatch/Info.plist
+        INFOPLIST_KEY_NSCameraUsageDescription: 申請書類（見積書・決算書など）をスキャンするためにカメラを使います。
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         INFOPLIST_KEY_CFBundleDisplayName: 補助金ウォッチ
         INFOPLIST_KEY_UILaunchScreen_Generation: YES

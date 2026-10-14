@@ -40,21 +40,36 @@ struct ChecklistItem: Codable, Hashable, Identifiable {
     var id = UUID()
     var title: String
     var done = false
+    /// 締切の何日前までに済ませるか（逆算スケジュール）。nil は期限なし
+    var daysBefore: Int?
 
-    /// 多くの補助金で共通する準備（補助金ごとに編集できる）
+    /// 期限の日（締切日から逆算。日本時間の暦日）
+    func dueDate(endAt: Date?) -> Date? {
+        guard let endAt, let daysBefore else { return nil }
+        let cal = Deadline.calendar
+        return cal.date(byAdding: .day, value: -daysBefore, to: cal.startOfDay(for: endAt))
+    }
+
+    /// 多くの補助金で共通する準備と、締切から逆算した目安（補助金ごとに編集できる）。
+    /// GビズIDプライムは発行に2〜3週間かかることがあるため早めに置く。
     static let defaults: [ChecklistItem] = [
-        "公募要領を読む",
-        "対象者・対象経費の要件を確認する",
-        "GビズIDプライムを取得する（電子申請に必要）",
-        "見積書をそろえる",
-        "事業計画書を作る",
-        "決算書・登記事項証明書などの書類をそろえる",
-        "Jグランツで申請する",
-    ].map { ChecklistItem(title: $0) }
+        ("公募要領を読む", 28),
+        ("対象者・対象経費の要件を確認する", 25),
+        ("GビズIDプライムを取得する（電子申請に必要）", 21),
+        ("見積書をそろえる", 14),
+        ("事業計画書を作る", 10),
+        ("決算書・登記事項証明書などの書類をそろえる", 7),
+        ("Jグランツで申請する", 2),
+    ].map { ChecklistItem(title: $0.0, daysBefore: $0.1) }
 }
 
 extension WatchedSubsidy {
     var checklistProgress: (done: Int, total: Int) {
         (checklist.filter(\.done).count, checklist.count)
+    }
+
+    /// 次にやること（未完了で期限が一番近いもの）
+    var nextTask: ChecklistItem? {
+        checklist.filter { !$0.done }.min { ($0.dueDate(endAt: endAt) ?? .distantFuture) < ($1.dueDate(endAt: endAt) ?? .distantFuture) }
     }
 }

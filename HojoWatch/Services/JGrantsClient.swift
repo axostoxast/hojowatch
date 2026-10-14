@@ -29,6 +29,13 @@ struct JGrantsClient: Sendable {
         return Self.sortedByDeadline(try await fetch(components.url!))
     }
 
+    /// 任意の条件で検索する（事業の情報による絞り込み用）
+    func search(queryItems: [URLQueryItem]) async throws -> [Subsidy] {
+        var components = URLComponents(url: Self.base, resolvingAgainstBaseURL: false)!
+        components.queryItems = queryItems
+        return Self.sortedByDeadline(try await fetch(components.url!))
+    }
+
     /// APIのsort指定は締切順にならないことがあるため、手元で並べ直す（締切不明は末尾）
     static func sortedByDeadline(_ items: [Subsidy]) -> [Subsidy] {
         items.sorted { ($0.endAt ?? .distantFuture) < ($1.endAt ?? .distantFuture) }

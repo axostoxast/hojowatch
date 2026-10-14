@@ -24,12 +24,22 @@ struct WatchListView: View {
                             }
                             .font(.caption)
                             .foregroundStyle(.secondary)
+                            if let next = item.nextTask {
+                                let due = next.dueDate(endAt: item.endAt)
+                                Text("次：\(next.title)" + (due.map { "（\(Deadline.dateLabel($0))まで）" } ?? ""))
+                                    .font(.caption)
+                                    .foregroundStyle(due.map { Deadline.daysLeft(until: $0) < 0 } == true ? .red : Color.accentColor)
+                                    .lineLimit(1)
+                            }
                         }
                         .padding(.vertical, 2)
                     }
                 }
                 .onDelete { offsets in
-                    offsets.map { watched[$0] }.forEach(context.delete)
+                    for i in offsets {
+                        DocumentStore().deleteAll(for: watched[i].subsidyID)
+                        context.delete(watched[i])
+                    }
                 }
             }
             .overlay {

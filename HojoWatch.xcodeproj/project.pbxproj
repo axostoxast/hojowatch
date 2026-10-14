@@ -11,20 +11,28 @@
 		051303053CC5D5B080DBE73B /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A01A93060F2058DF7DC9C80 /* WidgetSnapshot.swift */; };
 		1F1182496911231A4B390E5C /* WatchedSubsidy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE8C5F2CD770ABBF806CB12 /* WatchedSubsidy.swift */; };
 		30A25A96BAD62C491CCD4D13 /* WatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813936D50F1248180325A9C4 /* WatchListView.swift */; };
+		3769C49A351CEF8671148E88 /* DocumentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30976F3E55EDD647470F16DF /* DocumentsSection.swift */; };
+		44967D94C0F907ECC408A698 /* Matcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2843D833C93E6D74D1E74B3 /* Matcher.swift */; };
+		4CC31693B591A77F29E72B14 /* NewMatchChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756B3A1FD91E897DD883E336 /* NewMatchChecker.swift */; };
 		59E8418774B3B93CB41E3292 /* Subsidy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CA3DC93FA5AB0E167FA8D /* Subsidy.swift */; };
+		604B3E8E496C1756E7F4E48E /* DocumentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8FBC98AF0C690B05C823D /* DocumentStore.swift */; };
+		6172DE3419B84F2C97F03AA9 /* ForYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01584ECC3BCB595FF1618B49 /* ForYouView.swift */; };
 		67AEE4D3B9DC1B07915EE14C /* DeadlineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B0C529F04026A7B5F52FC /* DeadlineWidget.swift */; };
 		78B4EF9D6FC53E2C827425E0 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A01A93060F2058DF7DC9C80 /* WidgetSnapshot.swift */; };
 		89D5C2D15067BCE4890ED0D6 /* HojoWatchWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F5619E953D61880C1B70847F /* HojoWatchWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9C058028729B743AE7DC867B /* MatchAndPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE82F47804EBB931D15F8E7 /* MatchAndPlanTests.swift */; };
 		9C30C269FAC1B832A2470F6C /* WatchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35319EFAC177A64A997D7F07 /* WatchDetailView.swift */; };
 		A61B5CD43E14138F9915DD2A /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B046C30C39B8ACC26913DD0 /* PaywallView.swift */; };
 		A9E076734D5E34531E865997 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0747D698A8FB81A0B50F38 /* SearchView.swift */; };
 		AF4C2D0F7CC585C3B18E6D52 /* JGrantsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E16734C01F01B5F629CB6 /* JGrantsClient.swift */; };
+		B6D399AF2CEEECFD2463B5A3 /* TaskNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4053BE55CF1654A66209C /* TaskNotifier.swift */; };
 		C37DEBFDF71EE50FAA38865C /* HojoWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730D23CE8ECC3D053B12B0C /* HojoWatchTests.swift */; };
 		E493EB03D691AE39C5451B28 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E703B75866A410CC7533BB2 /* SettingsView.swift */; };
 		E4F9144B4BA11A796989DD54 /* ProStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EB7DB6EFF54963989370E /* ProStore.swift */; };
 		E81E3516D9FE938DACA3B917 /* Deadline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E680FD0417B1FE2A135F46 /* Deadline.swift */; };
 		F7102289A9D972B65D8FE054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301D57938C3AF39F61FDF673 /* Assets.xcassets */; };
 		F9DCF61B154459C9B013F807 /* HojoWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150AFE82973C6243B614CEA8 /* HojoWatchApp.swift */; };
+		FCD7CF713FDB4235C3F1DFBC /* BusinessProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C4D0C6A98AC53BEF05A2F1 /* BusinessProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,12 +67,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01584ECC3BCB595FF1618B49 /* ForYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouView.swift; sourceTree = "<group>"; };
+		02C4D0C6A98AC53BEF05A2F1 /* BusinessProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessProfile.swift; sourceTree = "<group>"; };
 		0BF265CD968B941C40856852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		150AFE82973C6243B614CEA8 /* HojoWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HojoWatchApp.swift; sourceTree = "<group>"; };
 		1A2CA3DC93FA5AB0E167FA8D /* Subsidy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subsidy.swift; sourceTree = "<group>"; };
 		1E703B75866A410CC7533BB2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		223C5782C74FEA86CDC4A425 /* HojoWatchWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HojoWatchWidget.entitlements; sourceTree = "<group>"; };
+		2AA4053BE55CF1654A66209C /* TaskNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskNotifier.swift; sourceTree = "<group>"; };
+		2CF8FBC98AF0C690B05C823D /* DocumentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentStore.swift; sourceTree = "<group>"; };
 		301D57938C3AF39F61FDF673 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30976F3E55EDD647470F16DF /* DocumentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsSection.swift; sourceTree = "<group>"; };
 		35319EFAC177A64A997D7F07 /* WatchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDetailView.swift; sourceTree = "<group>"; };
 		3730D23CE8ECC3D053B12B0C /* HojoWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HojoWatchTests.swift; sourceTree = "<group>"; };
 		46E680FD0417B1FE2A135F46 /* Deadline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deadline.swift; sourceTree = "<group>"; };
@@ -72,11 +85,14 @@
 		518BA2ED871CF4F934F8BBB1 /* HojoWatch.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HojoWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A01A93060F2058DF7DC9C80 /* WidgetSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSnapshot.swift; sourceTree = "<group>"; };
 		6B046C30C39B8ACC26913DD0 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		756B3A1FD91E897DD883E336 /* NewMatchChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMatchChecker.swift; sourceTree = "<group>"; };
 		80A4C2150FF39EE1818FC216 /* HojoWatchTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HojoWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		813936D50F1248180325A9C4 /* WatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListView.swift; sourceTree = "<group>"; };
 		9F9E16734C01F01B5F629CB6 /* JGrantsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGrantsClient.swift; sourceTree = "<group>"; };
+		B2843D833C93E6D74D1E74B3 /* Matcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matcher.swift; sourceTree = "<group>"; };
 		B60EB7DB6EFF54963989370E /* ProStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProStore.swift; sourceTree = "<group>"; };
 		B62B0C529F04026A7B5F52FC /* DeadlineWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineWidget.swift; sourceTree = "<group>"; };
+		BFE82F47804EBB931D15F8E7 /* MatchAndPlanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAndPlanTests.swift; sourceTree = "<group>"; };
 		DC0747D698A8FB81A0B50F38 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		EDE8C5F2CD770ABBF806CB12 /* WatchedSubsidy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedSubsidy.swift; sourceTree = "<group>"; };
 		F5619E953D61880C1B70847F /* HojoWatchWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = HojoWatchWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				3730D23CE8ECC3D053B12B0C /* HojoWatchTests.swift */,
+				BFE82F47804EBB931D15F8E7 /* MatchAndPlanTests.swift */,
 			);
 			path = HojoWatchTests;
 			sourceTree = "<group>";
@@ -107,6 +124,8 @@
 		41F566297DBB6085BF532DD0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				30976F3E55EDD647470F16DF /* DocumentsSection.swift */,
+				01584ECC3BCB595FF1618B49 /* ForYouView.swift */,
 				6B046C30C39B8ACC26913DD0 /* PaywallView.swift */,
 				DC0747D698A8FB81A0B50F38 /* SearchView.swift */,
 				1E703B75866A410CC7533BB2 /* SettingsView.swift */,
@@ -129,6 +148,7 @@
 		6E94E2C0DB65EAAFD8B010EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				02C4D0C6A98AC53BEF05A2F1 /* BusinessProfile.swift */,
 				1A2CA3DC93FA5AB0E167FA8D /* Subsidy.swift */,
 				EDE8C5F2CD770ABBF806CB12 /* WatchedSubsidy.swift */,
 			);
@@ -168,8 +188,12 @@
 			isa = PBXGroup;
 			children = (
 				46E680FD0417B1FE2A135F46 /* Deadline.swift */,
+				2CF8FBC98AF0C690B05C823D /* DocumentStore.swift */,
 				9F9E16734C01F01B5F629CB6 /* JGrantsClient.swift */,
+				B2843D833C93E6D74D1E74B3 /* Matcher.swift */,
+				756B3A1FD91E897DD883E336 /* NewMatchChecker.swift */,
 				B60EB7DB6EFF54963989370E /* ProStore.swift */,
+				2AA4053BE55CF1654A66209C /* TaskNotifier.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -293,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C37DEBFDF71EE50FAA38865C /* HojoWatchTests.swift in Sources */,
+				9C058028729B743AE7DC867B /* MatchAndPlanTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +325,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD7CF713FDB4235C3F1DFBC /* BusinessProfile.swift in Sources */,
 				03715543185A7868EF1704C7 /* Deadline.swift in Sources */,
+				604B3E8E496C1756E7F4E48E /* DocumentStore.swift in Sources */,
+				3769C49A351CEF8671148E88 /* DocumentsSection.swift in Sources */,
+				6172DE3419B84F2C97F03AA9 /* ForYouView.swift in Sources */,
 				F9DCF61B154459C9B013F807 /* HojoWatchApp.swift in Sources */,
 				AF4C2D0F7CC585C3B18E6D52 /* JGrantsClient.swift in Sources */,
+				44967D94C0F907ECC408A698 /* Matcher.swift in Sources */,
+				4CC31693B591A77F29E72B14 /* NewMatchChecker.swift in Sources */,
 				A61B5CD43E14138F9915DD2A /* PaywallView.swift in Sources */,
 				E4F9144B4BA11A796989DD54 /* ProStore.swift in Sources */,
 				A9E076734D5E34531E865997 /* SearchView.swift in Sources */,
 				E493EB03D691AE39C5451B28 /* SettingsView.swift in Sources */,
 				59E8418774B3B93CB41E3292 /* Subsidy.swift in Sources */,
+				B6D399AF2CEEECFD2463B5A3 /* TaskNotifier.swift in Sources */,
 				9C30C269FAC1B832A2470F6C /* WatchDetailView.swift in Sources */,
 				30A25A96BAD62C491CCD4D13 /* WatchListView.swift in Sources */,
 				1F1182496911231A4B390E5C /* WatchedSubsidy.swift in Sources */,
@@ -401,8 +433,10 @@
 				CODE_SIGN_ENTITLEMENTS = HojoWatch/HojoWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HojoWatch/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "補助金ウォッチ";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSCameraUsageDescription = "申請書類（見積書・決算書など）をスキャンするためにカメラを使います。";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -501,8 +535,10 @@
 				CODE_SIGN_ENTITLEMENTS = HojoWatch/HojoWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HojoWatch/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "補助金ウォッチ";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSCameraUsageDescription = "申請書類（見積書・決算書など）をスキャンするためにカメラを使います。";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
