@@ -25,6 +25,7 @@
 		A61B5CD43E14138F9915DD2A /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B046C30C39B8ACC26913DD0 /* PaywallView.swift */; };
 		A9E076734D5E34531E865997 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0747D698A8FB81A0B50F38 /* SearchView.swift */; };
 		AF4C2D0F7CC585C3B18E6D52 /* JGrantsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E16734C01F01B5F629CB6 /* JGrantsClient.swift */; };
+		AF89ED8C7CC00CDCEAB7F314 /* ReviewPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FB331A0464DA9F685BED81 /* ReviewPrompt.swift */; };
 		B6D399AF2CEEECFD2463B5A3 /* TaskNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4053BE55CF1654A66209C /* TaskNotifier.swift */; };
 		C37DEBFDF71EE50FAA38865C /* HojoWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730D23CE8ECC3D053B12B0C /* HojoWatchTests.swift */; };
 		E493EB03D691AE39C5451B28 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E703B75866A410CC7533BB2 /* SettingsView.swift */; };
@@ -88,6 +89,7 @@
 		756B3A1FD91E897DD883E336 /* NewMatchChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMatchChecker.swift; sourceTree = "<group>"; };
 		80A4C2150FF39EE1818FC216 /* HojoWatchTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HojoWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		813936D50F1248180325A9C4 /* WatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListView.swift; sourceTree = "<group>"; };
+		97FB331A0464DA9F685BED81 /* ReviewPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPrompt.swift; sourceTree = "<group>"; };
 		9F9E16734C01F01B5F629CB6 /* JGrantsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGrantsClient.swift; sourceTree = "<group>"; };
 		B2843D833C93E6D74D1E74B3 /* Matcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matcher.swift; sourceTree = "<group>"; };
 		B60EB7DB6EFF54963989370E /* ProStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProStore.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				B2843D833C93E6D74D1E74B3 /* Matcher.swift */,
 				756B3A1FD91E897DD883E336 /* NewMatchChecker.swift */,
 				B60EB7DB6EFF54963989370E /* ProStore.swift */,
+				97FB331A0464DA9F685BED81 /* ReviewPrompt.swift */,
 				2AA4053BE55CF1654A66209C /* TaskNotifier.swift */,
 			);
 			path = Services;
@@ -336,6 +339,7 @@
 				4CC31693B591A77F29E72B14 /* NewMatchChecker.swift in Sources */,
 				A61B5CD43E14138F9915DD2A /* PaywallView.swift in Sources */,
 				E4F9144B4BA11A796989DD54 /* ProStore.swift in Sources */,
+				AF89ED8C7CC00CDCEAB7F314 /* ReviewPrompt.swift in Sources */,
 				A9E076734D5E34531E865997 /* SearchView.swift in Sources */,
 				E493EB03D691AE39C5451B28 /* SettingsView.swift in Sources */,
 				59E8418774B3B93CB41E3292 /* Subsidy.swift in Sources */,

@@ -98,6 +98,7 @@ struct SearchView: View {
         }
         context.insert(WatchedSubsidy(subsidy))
         Task { _ = await DeadlineNotifier.requestAuthorization() }
+        ReviewPrompt.recordSuccess(milestones: [3, 10, 30])
     }
 }
 
