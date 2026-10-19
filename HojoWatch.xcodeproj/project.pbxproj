@@ -19,6 +19,7 @@
 		6172DE3419B84F2C97F03AA9 /* ForYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01584ECC3BCB595FF1618B49 /* ForYouView.swift */; };
 		67AEE4D3B9DC1B07915EE14C /* DeadlineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B0C529F04026A7B5F52FC /* DeadlineWidget.swift */; };
 		78B4EF9D6FC53E2C827425E0 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A01A93060F2058DF7DC9C80 /* WidgetSnapshot.swift */; };
+		858D447083D88010E3F493D3 /* OtherApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462FEC23889F9A8D7B364F79 /* OtherApps.swift */; };
 		89D5C2D15067BCE4890ED0D6 /* HojoWatchWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F5619E953D61880C1B70847F /* HojoWatchWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9C058028729B743AE7DC867B /* MatchAndPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE82F47804EBB931D15F8E7 /* MatchAndPlanTests.swift */; };
 		9C30C269FAC1B832A2470F6C /* WatchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35319EFAC177A64A997D7F07 /* WatchDetailView.swift */; };
@@ -81,6 +82,7 @@
 		30976F3E55EDD647470F16DF /* DocumentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsSection.swift; sourceTree = "<group>"; };
 		35319EFAC177A64A997D7F07 /* WatchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDetailView.swift; sourceTree = "<group>"; };
 		3730D23CE8ECC3D053B12B0C /* HojoWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HojoWatchTests.swift; sourceTree = "<group>"; };
+		462FEC23889F9A8D7B364F79 /* OtherApps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherApps.swift; sourceTree = "<group>"; };
 		46E680FD0417B1FE2A135F46 /* Deadline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deadline.swift; sourceTree = "<group>"; };
 		4D94FC7B7E54637B49C03A57 /* HojoWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HojoWatch.entitlements; sourceTree = "<group>"; };
 		518BA2ED871CF4F934F8BBB1 /* HojoWatch.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HojoWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +130,7 @@
 			children = (
 				30976F3E55EDD647470F16DF /* DocumentsSection.swift */,
 				01584ECC3BCB595FF1618B49 /* ForYouView.swift */,
+				462FEC23889F9A8D7B364F79 /* OtherApps.swift */,
 				6B046C30C39B8ACC26913DD0 /* PaywallView.swift */,
 				DC0747D698A8FB81A0B50F38 /* SearchView.swift */,
 				1E703B75866A410CC7533BB2 /* SettingsView.swift */,
@@ -337,6 +340,7 @@
 				AF4C2D0F7CC585C3B18E6D52 /* JGrantsClient.swift in Sources */,
 				44967D94C0F907ECC408A698 /* Matcher.swift in Sources */,
 				4CC31693B591A77F29E72B14 /* NewMatchChecker.swift in Sources */,
+				858D447083D88010E3F493D3 /* OtherApps.swift in Sources */,
 				A61B5CD43E14138F9915DD2A /* PaywallView.swift in Sources */,
 				E4F9144B4BA11A796989DD54 /* ProStore.swift in Sources */,
 				AF89ED8C7CC00CDCEAB7F314 /* ReviewPrompt.swift in Sources */,

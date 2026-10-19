@@ -26,6 +26,7 @@ struct SettingsView: View {
                     }
                 }
 
+                OtherAppsSection(items: OtherAppsSection.business, current: "6821510788")
                 Section("このアプリについて") {
                     AttributionText()
                     Link("Jグランツ（補助金の原典）", destination: URL(string: "https://www.jgrants-portal.go.jp/")!)
