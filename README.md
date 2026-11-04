@@ -3,6 +3,8 @@
 受付中の補助金をjGrants公開APIから探し、ウォッチした補助金の締切前にローカル通知で知らせるiOSアプリ。
 サーバーなし（端末からAPIを直接呼ぶ）。無料はウォッチ3件まで・通知は7日前／3日前／前日。プロ版（買い切り¥480）でウォッチ無制限・通知タイミング（30日前〜当日）を設定できる。
 
+紹介ページ: https://axostoxast.github.io/tanacount-support/hojowatch/ ／ 受付中の補助金一覧: https://axostoxast.github.io/tanacount-support/hojokin-list/
+
 ## 構成
 ```
 project.yml             XcodeGen定義（.xcodeprojはここから生成）
