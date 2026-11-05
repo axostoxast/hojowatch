@@ -38,6 +38,18 @@ struct DecodingTests {
         #expect(JGrantsClient.sortedByDeadline(items).map(\.id) == ["soon", "late", "none"])
     }
 
+    @Test func excludesPracticeAndPostAwardProcedures() {
+        let items = [
+            Subsidy(id: "new", title: "令和8年度 創業支援補助金", endAt: jst("2026-12-01T14:59:00Z")),
+            Subsidy(id: "practice", title: "申請練習用補助金【補助金の支払いはありません】"),
+            Subsidy(id: "grant", title: "［第十回］事業再構築補助金（交付申請等）"),
+            Subsidy(id: "report", title: "女性活躍情報公開促進奨励金　実績報告"),
+            Subsidy(id: "after", title: "設備投資支援事業_事業完了後申請（令和８年）"),
+            Subsidy(id: "advance", title: "【事前着手】排出削減支援事業（二次公募）", endAt: jst("2026-11-27T14:59:00Z")),
+        ]
+        #expect(JGrantsClient.listable(items).map(\.id) == ["advance", "new"])
+    }
+
     @Test func rejectsShortKeyword() {
         #expect(throws: JGrantsClient.ClientError.keywordTooShort) {
             try JGrantsClient.searchQuery(keyword: " 補 ", area: nil)

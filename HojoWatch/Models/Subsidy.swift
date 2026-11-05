@@ -37,6 +37,11 @@ struct Subsidy: Decodable, Identifiable, Hashable, Sendable {
         endAt = (try c.decodeIfPresent(String.self, forKey: .endAt)).flatMap(JGrantsDate.parse)
     }
 
+    /// 申請の練習用や採択後の手続きではない（公開情報に区別がないので名前で判定する）
+    var isNewApplication: Bool {
+        title.range(of: "申請練習用|交付申請等|消費税報告|実績報告|状況報告|奨励金請求|変更承認申請|事業完了後", options: .regularExpression) == nil
+    }
+
     var portalURL: URL {
         URL(string: "https://www.jgrants-portal.go.jp/subsidy/\(id)")!
     }

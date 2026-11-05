@@ -56,7 +56,11 @@ struct SearchView: View {
                     } header: {
                         Text("\(results.count)件（締切が近い順）")
                     } footer: {
-                        AttributionText()
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text("申請の練習用と、採択後の手続きと思われるものは表示していません。")
+                                .font(.caption2)
+                            AttributionText()
+                        }
                     }
                 }
             }

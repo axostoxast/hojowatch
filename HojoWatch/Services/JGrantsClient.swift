@@ -26,14 +26,19 @@ struct JGrantsClient: Sendable {
     func search(keyword: String, area: String?) async throws -> [Subsidy] {
         var components = URLComponents(url: Self.base, resolvingAgainstBaseURL: false)!
         components.queryItems = try Self.searchQuery(keyword: keyword, area: area)
-        return Self.sortedByDeadline(try await fetch(components.url!))
+        return Self.listable(try await fetch(components.url!))
     }
 
     /// 任意の条件で検索する（事業の情報による絞り込み用）
     func search(queryItems: [URLQueryItem]) async throws -> [Subsidy] {
         var components = URLComponents(url: Self.base, resolvingAgainstBaseURL: false)!
         components.queryItems = queryItems
-        return Self.sortedByDeadline(try await fetch(components.url!))
+        return Self.listable(try await fetch(components.url!))
+    }
+
+    /// 検索結果に出すもの。ウォッチ済みの更新に使う detail(id:) には適用しない
+    static func listable(_ items: [Subsidy]) -> [Subsidy] {
+        sortedByDeadline(items.filter(\.isNewApplication))
     }
 
     /// APIのsort指定は締切順にならないことがあるため、手元で並べ直す（締切不明は末尾）
