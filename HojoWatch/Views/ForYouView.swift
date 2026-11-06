@@ -107,7 +107,7 @@ struct ForYouView: View {
         VStack(alignment: .leading, spacing: 12) {
             Label("事業の情報を登録すると、合いそうな補助金を自動で集めます", systemImage: "sparkles")
                 .font(.headline)
-            Text("地域・業種・従業員数・やりたいこと（設備投資、販路開拓など）から、受付中の補助金を探します。新しい補助金が出たら通知でお知らせします。情報はこのiPhoneの中だけに保存します。")
+            Text("地域・業種・従業員数・やりたいこと（設備投資、販路開拓など）から、受付中の補助金を探します。新しい補助金が出たら通知でお知らせします。情報はこの端末の中だけに保存します。")
                 .font(.callout)
                 .foregroundStyle(.secondary)
             Button("事業の情報を登録する") { editingProfile = true }

@@ -7,8 +7,8 @@ options:
 settings:
   base:
     SWIFT_VERSION: "6.0"
-    MARKETING_VERSION: "1.0.2"
-    CURRENT_PROJECT_VERSION: "202611051"
+    MARKETING_VERSION: "1.0.3"
+    CURRENT_PROJECT_VERSION: "202611061"
     DEVELOPMENT_TEAM: TJM8F4Z2Z2
     CODE_SIGN_STYLE: Automatic
 targets:
@@ -32,8 +32,10 @@ targets:
         INFOPLIST_KEY_CFBundleDisplayName: 補助金ウォッチ
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown"
+        INFOPLIST_KEY_UIRequiresFullScreen: YES
         INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
-        TARGETED_DEVICE_FAMILY: "1"
+        TARGETED_DEVICE_FAMILY: "1,2"
     scheme:
       storeKitConfiguration: HojoWatch.storekit
       testTargets: [HojoWatchTests]
@@ -51,7 +53,7 @@ targets:
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_KEY_CFBundleDisplayName: 補助金ウォッチ
         CODE_SIGN_ENTITLEMENTS: HojoWatchWidget/HojoWatchWidget.entitlements
-        TARGETED_DEVICE_FAMILY: "1"
+        TARGETED_DEVICE_FAMILY: "1,2"
         SKIP_INSTALL: YES
   HojoWatchTests:
     type: bundle.unit-test

@@ -46,7 +46,7 @@ struct DocumentsSection: View {
         } header: {
             Text("申請書類（\(items.count)）")
         } footer: {
-            Text("見積書・決算書・登記事項証明書などをまとめておけます。書類はこのiPhoneの中だけに保存されます。長押しで名前の変更や共有ができます。")
+            Text("見積書・決算書・登記事項証明書などをまとめておけます。書類はこの端末の中だけに保存されます。長押しで名前の変更や共有ができます。")
         }
         .onAppear(perform: reload)
         .quickLookPreview($preview, in: items.map(\.url))
